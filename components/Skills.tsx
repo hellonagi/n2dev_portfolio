@@ -10,6 +10,7 @@ import EXPRESS from '../public/devicons/express-original.svg'
 import NEXT from '../public/devicons/nextjs-original.svg'
 import MYSQL from '../public/devicons/mysql-original.svg'
 import PYTHON from '../public/devicons/python-original.svg'
+import P5 from '../public/devicons/p5js.svg'
 
 const SVGIcon = ({ name, SVG }: any) => {
 	return (
@@ -39,6 +40,7 @@ const Skills = () => {
 				<SVGIcon name='Next.js' SVG={NEXT} />
 				<SVGIcon name='MySQL' SVG={MYSQL} />
 				<SVGIcon name='Python' SVG={PYTHON} />
+				<SVGIcon name='p5.js' SVG={P5} />
 			</Flex>
 		</Section>
 	)
