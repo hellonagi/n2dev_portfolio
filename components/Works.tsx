@@ -102,7 +102,7 @@ const Works = () => {
 
 					<Box p={1} ml={2} position='relative'>
 						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
-							<LinkOverlay href='https://youtu.be/m0PeKPB_kIU'>
+							<LinkOverlay href='https://youtu.be/FeLgkuqB8UI'>
 								新型コロナウイルス感染症マップ
 							</LinkOverlay>
 						</Heading>
