@@ -11,14 +11,14 @@ const Contact = () => {
 				Contact
 			</Heading>
 			<HStack spacing={4} mt={4}>
-				<Button
+				{/* <Button
 					leftIcon={<IoLogoTwitter />}
 					variant='outline'
 					as='a'
 					href='https://twitter.com/n2dev_'
 				>
 					@n2dev_
-				</Button>
+				</Button> */}
 				<Button
 					leftIcon={<IoLogoGithub />}
 					variant='outline'

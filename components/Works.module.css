@@ -1,5 +1,6 @@
 .thumb {
 	border-radius: 6px;
+	min-width: 96px;
 }
 
 .wt {

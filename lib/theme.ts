@@ -13,7 +13,6 @@ const components = {
 	Heading: {
 		variants: {
 			'section-title': {
-				textDecoration: 'underline',
 				fontSize: 20,
 				textUnderlineOffset: 6,
 				textDecorationColor: '#525252',
@@ -25,7 +24,7 @@ const components = {
 	},
 	Link: {
 		baseStyle: (props: GlobalStyleProps) => ({
-			color: mode('#3d7aed', '#ff63c3')(props),
+			color: mode('#3d7aed', '#3d7aed')(props),
 			textUnderlineOffset: 3,
 		}),
 	},

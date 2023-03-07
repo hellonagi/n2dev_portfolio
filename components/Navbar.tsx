@@ -13,24 +13,10 @@ import {
 	useColorModeValue,
 	useStyleConfig,
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ToggleButton from './ToggleButton'
 
-function NLink(props: any) {
-	const styles = useStyleConfig('Link', props)
-
-	return (
-		<Link
-			sx={{
-				color: useColorModeValue('gray200', 'whiteAlpha.900'),
-			}}
-			__css={{
-				...styles,
-			}}
-			{...props}
-		/>
-	)
-}
 
 const Navbar = () => {
 	return (
@@ -42,14 +28,23 @@ const Navbar = () => {
 			css={{ backdropFilter: 'blur(10px)' }}
 			zIndex={1}
 		>
-			<Container display='flex' p={2} maxW='container.md'>
-				<Flex textAlign='center' mr={5}>
-					<Heading as='h1' size='lg' letterSpacing={'tighter'}>
-						n2dev
-					</Heading>
+			<Container
+				display='flex'
+				p={2}
+				maxW='container.md'
+				position='relative'
+				justifyContent='center'
+				alignItems='center'
+			>
+				<Flex mr={5}>
+					<Link as={NextLink} href='/' color={useColorModeValue('gray200', 'whiteAlpha.900')}>
+						<Heading as='h1' size='lg' letterSpacing={'tighter'} textAlign='center'>
+							n2dev
+						</Heading>
+					</Link>
 				</Flex>
 
-				<Stack
+				{/* <Stack
 					direction={{ base: 'column', md: 'row' }}
 					display={{ base: 'none', md: 'flex' }}
 					width={{ base: 'full', md: 'auto' }}
@@ -66,12 +61,12 @@ const Navbar = () => {
 					<NLink p={2} href='#contact'>
 						Contact
 					</NLink>
-				</Stack>
+				</Stack> */}
 
-				<Box flex={1} textAlign='right'>
+				<Box flex={1} position='absolute' right={10}>
 					<ToggleButton />
 
-					<Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+					{/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
 						<Menu isLazy id='navbar-menu'>
 							<MenuButton
 								as={IconButton}
@@ -80,7 +75,7 @@ const Navbar = () => {
 								aria-label='Options'
 							/>
 							<MenuList>
-								<MenuItem as={Link} href='#skills'>
+								<MenuItem as={Link} href='/#skills'>
 									Skills
 								</MenuItem>
 								<MenuItem as={Link} href='#works'>
@@ -91,7 +86,7 @@ const Navbar = () => {
 								</MenuItem>
 							</MenuList>
 						</Menu>
-					</Box>
+					</Box> */}
 				</Box>
 			</Container>
 		</Box>

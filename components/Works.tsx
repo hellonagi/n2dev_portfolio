@@ -6,13 +6,12 @@ import React from 'react'
 import styles from './Works.module.css'
 
 const Works = () => {
-	const lazyRoot = React.useRef(null)
-
 	return (
 		<Section delay={0.2} id='works'>
 			<Heading as='h2' size='md' letterSpacing={'tighter'}>
 				Works
 			</Heading>
+
 			<LinkBox
 				mt={4}
 				p={2}
@@ -24,11 +23,38 @@ const Works = () => {
 				<Flex>
 					<Box lineHeight={0}>
 						<Image
-							lazyRoot={lazyRoot}
+							src='/images/yacht.png'
+							width={96}
+							height={96}
+							alt='Yacht Dice'
+							className={styles.thumb}
+						/>
+					</Box>
+
+					<Box p={1} ml={2} position='relative'>
+						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
+							<LinkOverlay href='#'>ヨット</LinkOverlay>
+						</Heading>
+						<p>5つのサイコロを振って、その組み合わせから役を作り、高得点を競うボードゲーム</p>
+						<small className={styles.wt}>Androidアプリ</small>
+					</Box>
+				</Flex>
+			</LinkBox>
+
+			<LinkBox
+				mt={2}
+				p={2}
+				rounded='md'
+				as='article'
+				bg={useColorModeValue('#eee', '#333')}
+				_hover={{ bg: useColorModeValue('#eaeaea', '#2c2c2c') }}
+			>
+				<Flex>
+					<Box lineHeight={0}>
+						<Image
 							src='/images/dcafe.png'
 							width={96}
 							height={96}
-							layout='fixed'
 							alt='Discord Cafe'
 							className={styles.thumb}
 						/>
@@ -55,11 +81,9 @@ const Works = () => {
 				<Flex>
 					<Box lineHeight={0}>
 						<Image
-							lazyRoot={lazyRoot}
 							src='/images/qdict.png'
 							width={96}
 							height={96}
-							layout='fixed'
 							alt='一括英単語検索'
 							className={styles.thumb}
 						/>
@@ -90,11 +114,9 @@ const Works = () => {
 				<Flex>
 					<Box lineHeight={0}>
 						<Image
-							lazyRoot={lazyRoot}
 							src='/images/crmap.jpg'
 							width={96}
 							height={96}
-							layout='fixed'
 							alt='新型コロナウイルス感染症マップ'
 							className={styles.thumb}
 						/>
