@@ -32,7 +32,7 @@ const Contact = () => {
 					icon={<EmailIcon />}
 					variant='outline'
 					as='a'
-					href='mailto:ntwo.dev@gmail.com'
+					href='mailto:info@ntwo.dev'
 				/>
 			</HStack>
 		</Section>

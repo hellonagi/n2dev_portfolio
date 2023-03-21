@@ -33,7 +33,13 @@ const Works = () => {
 
 					<Box p={1} ml={2} position='relative'>
 						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
-							<LinkOverlay href='#'>ヨット</LinkOverlay>
+							<LinkOverlay
+								href='https://play.google.com/store/apps/details?id=com.n2dev.YachtDice'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								ヨット
+							</LinkOverlay>
 						</Heading>
 						<p>5つのサイコロを振って、その組み合わせから役を作り、高得点を競うボードゲーム</p>
 						<small className={styles.wt}>Androidアプリ</small>
@@ -62,7 +68,9 @@ const Works = () => {
 
 					<Box p={1} ml={2} position='relative'>
 						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
-							<LinkOverlay href='https://discordcafe.app'>Discord Cafe</LinkOverlay>
+							<LinkOverlay href='https://discordcafe.app' target='_blank' rel='noopener noreferrer'>
+								Discord Cafe
+							</LinkOverlay>
 						</Heading>
 						<p>音声通話アプリDiscordのサーバー宣伝やフレンド募集ができるユーザー投稿型サイト</p>
 						<small className={styles.wt}>Webアプリ</small>
@@ -91,7 +99,11 @@ const Works = () => {
 
 					<Box p={1} ml={2} position='relative'>
 						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
-							<LinkOverlay href='https://chrome.google.com/webstore/detail/%E4%B8%80%E6%8B%AC%E8%8B%B1%E5%8D%98%E8%AA%9E%E6%A4%9C%E7%B4%A2/hppoficilhdedjgledncaoknmgfejaoi'>
+							<LinkOverlay
+								href='https://chrome.google.com/webstore/detail/%E4%B8%80%E6%8B%AC%E8%8B%B1%E5%8D%98%E8%AA%9E%E6%A4%9C%E7%B4%A2/hppoficilhdedjgledncaoknmgfejaoi'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								一括英単語検索
 							</LinkOverlay>
 						</Heading>
@@ -124,13 +136,15 @@ const Works = () => {
 
 					<Box p={1} ml={2} position='relative'>
 						<Heading as='h3' size='xs' letterSpacing={'tighter'}>
-							<LinkOverlay href='https://youtu.be/FeLgkuqB8UI'>
+							<LinkOverlay
+								href='https://youtu.be/FeLgkuqB8UI'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								新型コロナウイルス感染症マップ
 							</LinkOverlay>
 						</Heading>
-						<p>
-							2020年初旬の新型コロナウイルスの感染者数を可視化したマップ
-						</p>
+						<p>2020年初旬の新型コロナウイルスの感染者数を可視化したマップ</p>
 						<small className={styles.wt}>p5.js</small>
 					</Box>
 				</Flex>

@@ -140,7 +140,7 @@ const PrivacyPolicy = () => {
 			</Heading>
 			<Paragraph>
 				If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact
-				me at ntwo.dev@gmail.com.
+				me at info@ntwo.dev.
 			</Paragraph>
 		</Section>
 	)

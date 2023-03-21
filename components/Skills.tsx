@@ -14,7 +14,7 @@ import P5 from '../public/devicons/p5js.svg'
 
 const SVGIcon = ({ name, SVG }: any) => {
 	return (
-		<Box m={2} p={4} rounded='md' bg={useColorModeValue('#eee', '#333')}>
+		<Box m={1} p={3} rounded='md' bg={useColorModeValue('#eee', '#333')}>
 			<SVG width={64} />
 			<Heading mt={1} as='div' size='xs' letterSpacing={'tighter'} textAlign='center'>
 				{name}
