@@ -15,8 +15,7 @@ import {
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import ToggleButton from './ToggleButton'
-
+import ToggleButton from './utils/ToggleButton'
 
 const Navbar = () => {
 	return (
@@ -31,18 +30,15 @@ const Navbar = () => {
 			<Container
 				display='flex'
 				p={2}
-				maxW='container.md'
 				position='relative'
 				justifyContent='center'
 				alignItems='center'
 			>
-				<Flex mr={5}>
-					<Link as={NextLink} href='/' color={useColorModeValue('gray200', 'whiteAlpha.900')}>
-						<Heading as='h1' size='lg' letterSpacing={'tighter'} textAlign='center'>
-							n2dev
-						</Heading>
-					</Link>
-				</Flex>
+				<Link as={NextLink} href='/' color={useColorModeValue('gray200', 'whiteAlpha.900')}>
+					<Heading as='h1' size='lg' letterSpacing={'tighter'} textAlign='center'>
+						n2dev
+					</Heading>
+				</Link>
 
 				{/* <Stack
 					direction={{ base: 'column', md: 'row' }}
@@ -63,7 +59,7 @@ const Navbar = () => {
 					</NLink>
 				</Stack> */}
 
-				<Box flex={1} position='absolute' right={10}>
+				<Box flex={1} position='absolute' right={2}>
 					<ToggleButton />
 
 					{/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

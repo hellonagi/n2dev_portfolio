@@ -1,5 +1,5 @@
 import { Box, Button, IconButton, Heading, HStack } from '@chakra-ui/react'
-import Paragraph from './Paragraph'
+import Paragraph from './utils/Paragraph'
 import Section from './Section'
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import { EmailIcon } from '@chakra-ui/icons'

@@ -3,7 +3,7 @@ import { Container } from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import About from '../components/About'
 import Skills from '../components/Skills'
-import Works from '../components/Works'
+import Projects from '../components/Projects'
 import Contact from '../components/Contact'
 
 const Home: NextPage = () => {
@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 		<Layout>
 			<Container>
 				<About />
-				<Works />
+				<Projects />
 				<Skills />
 				<Contact />
 			</Container>

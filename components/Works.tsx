@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react'
-import Paragraph from './Paragraph'
+import Paragraph from './utils/Paragraph'
 import Section from './Section'
 import Image from 'next/image'
 import React from 'react'
