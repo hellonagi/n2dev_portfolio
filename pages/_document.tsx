@@ -4,7 +4,7 @@ export default function Document() {
 	return (
 		<Html>
 			<Head>
-				<meta name='description' content='n2devのページ' />
+				<meta name='description' content='n2devのポートフォリオ' />
 				<meta name='author' content='n2dev' />
 				<link rel='apple-touch-icon' href='/apple-touch-icon.png' />
 				<link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />

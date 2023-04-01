@@ -18,7 +18,7 @@ import {
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Image from 'next/image'
 import { projects, tagColorMap } from '../../constants'
-
+import styles from './ProjectModal.module.css'
 interface ProjectModalProp {
 	isOpen: boolean
 	onClose: () => void
@@ -28,7 +28,7 @@ interface ProjectModalProp {
 
 const ProjectModal = ({ isOpen, onClose, overlay, projectIndex }: ProjectModalProp) => {
 	return (
-		<Modal isCentered isOpen={isOpen} onClose={onClose} size='lg' scrollBehavior={'outside'}>
+		<Modal isCentered isOpen={isOpen} onClose={onClose} size='lg' scrollBehavior={'inside'}>
 			{overlay}
 			<ModalContent>
 				<ModalHeader pb={2}>
@@ -39,19 +39,19 @@ const ProjectModal = ({ isOpen, onClose, overlay, projectIndex }: ProjectModalPr
 					{/* <Flex position='relative' justifyContent='center'> */}
 					{projects[projectIndex].youtube ? (
 						<iframe
-							width='464'
-							height='261'
+							className={styles.iframe}
 							src={projects[projectIndex].youtube}
-							title='YouTube video player'
 							allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 							allowFullScreen
 						></iframe>
 					) : (
 						<Image
 							src={`/images/${projects[projectIndex].hero}`}
-							width={500}
-							height={500}
+							width={464}
+							height={261}
 							alt='Yacht Dice'
+							placeholder='blur'
+							blurDataURL={`/images/blurs/${projects[projectIndex].hero}`}
 						/>
 					)}
 
