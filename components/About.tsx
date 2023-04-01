@@ -1,25 +1,28 @@
-import { Box, Heading } from '@chakra-ui/react'
-import Paragraph from './utils/Paragraph'
-import Section from './Section'
+import { Heading, Text, Stack, useColorModeValue, UnorderedList, ListItem } from '@chakra-ui/react'
+import Section from './utils/Section'
 
 const About = () => {
+	const bgColor = useColorModeValue('#eee', '#333')
+
 	return (
 		<Section id='about'>
-			<Heading as='h2' size='md' letterSpacing={'tighter'}>
+			<Heading as='h2' size='md' letterSpacing={'tighter'} my={2}>
 				About
 			</Heading>
-			<Paragraph>
-				こんにちは！私は独学でWeb開発を学んだエンジニアです。React、Express、およびMySQLを使ったプロジェクトに情熱を持って取り組んでいます。私の目標は、フルスタックエンジニアとしてスキルを磨き、クライアントやチームに最高のソリューションを提供することです。
-			</Paragraph>
-			<Paragraph>
-				自分自身を常に挑戦し、新しい技術を学ぶことが好きで、これが私が独学でプログラミングを学んだ理由の一つです。その過程で、Reactを使ったフロントエンド開発、Expressを使ったバックエンド開発、そしてMySQLを使ったデータベース管理に習熟しました。
-			</Paragraph>
-			<Paragraph>
-				趣味として、ゲーム開発も行っています。この活動を通じて、プログラミングだけでなく、クリエイティブな発想やチームワークの重要性も学んでいます。私は自分のスキルを活かして、Web開発だけでなくゲーム開発のプロジェクトにも貢献したいと考えています。
-			</Paragraph>
-			<Paragraph>
-				将来的には、フルスタックエンジニアとしてのキャリアを追求し、Web開発とゲーム開発の両方で革新的なプロジェクトに携わりたいと考えています。私はチームの一員として、または個人として、最高品質の成果を提供することに専念しています。どのようなプロジェクトでも、私は最善を尽くし、継続的に学び、成長していくことを約束します。
-			</Paragraph>
+			<Stack spacing={2} bg={bgColor} p={4} rounded='md'>
+				<Text fontSize='sm'>見てくださってありがとうございます。</Text>
+				<Text fontSize='sm'>
+					独学でWeb開発やゲーム開発をしているNagiといいます。現在はReact、Express、MySQLを使ったプロジェクトに情熱を持って取り組んでいます。目標はユーザー数1万人以上のプロジェクトに携わることです。
+				</Text>
+				<br />
+				<Text fontSize='sm'>簡単なプログラミング歴</Text>
+				<UnorderedList listStyleType='none'>
+					<ListItem>[2019-2020] AtCoderで競技プログラミングに嵌まる(Python, 緑色)</ListItem>
+					<ListItem>[2021] Chrome拡張機能を制作(JavaScript)</ListItem>
+					<ListItem>[2022] 外部APIを使用したWebアプリを制作(React, Express, MySQL)</ListItem>
+					<ListItem>[2023] Unityでゲームを作りGoogle Playストアで公開(C#)</ListItem>
+				</UnorderedList>
+			</Stack>
 		</Section>
 	)
 }

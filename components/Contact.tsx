@@ -1,6 +1,5 @@
 import { Box, Button, IconButton, Heading, HStack } from '@chakra-ui/react'
-import Paragraph from './utils/Paragraph'
-import Section from './Section'
+import Section from './utils/Section'
 import { IoLogoTwitter, IoLogoGithub } from 'react-icons/io5'
 import { EmailIcon } from '@chakra-ui/icons'
 
@@ -21,7 +20,7 @@ const Contact = () => {
 				</Button> */}
 				<Button
 					leftIcon={<IoLogoGithub />}
-					variant='outline'
+					variant='solid'
 					as='a'
 					href='https://github.com/n2dev'
 				>
@@ -30,7 +29,7 @@ const Contact = () => {
 				<IconButton
 					aria-label='email'
 					icon={<EmailIcon />}
-					variant='outline'
+					variant='solid'
 					as='a'
 					href='mailto:info@ntwo.dev'
 				/>

@@ -8,11 +8,12 @@ import {
 	Text,
 	Heading,
 	Button,
-	Flex,
 	Stack,
 	Badge,
 	ListItem,
 	UnorderedList,
+	Wrap,
+	WrapItem,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import Image from 'next/image'
@@ -55,13 +56,17 @@ const ProjectModal = ({ isOpen, onClose, overlay, projectIndex }: ProjectModalPr
 					)}
 
 					{/* </Flex> */}
-					<Stack direction='row' my={2}>
+					{/* <Stack direction='row' my={2} wrap='wrap'> */}
+					<Wrap mt={2}>
 						{projects[projectIndex].tags?.map((tag: string) => (
-							<Badge key={tag} colorScheme={tagColorMap[tag] || 'gray'} variant='solid'>
-								{tag}
-							</Badge>
+							<WrapItem key={tag}>
+								<Badge colorScheme={tagColorMap[tag] || 'gray'} variant='solid'>
+									{tag}
+								</Badge>
+							</WrapItem>
 						))}
-					</Stack>
+					</Wrap>
+					{/* </Stack> */}
 					<Stack direction='row' my={2}>
 						<Button
 							as='a'
@@ -96,14 +101,30 @@ const ProjectModal = ({ isOpen, onClose, overlay, projectIndex }: ProjectModalPr
 						概要
 					</Heading>
 					<Text fontSize='sm'>{projects[projectIndex].project_desc}</Text>
-					<Heading as='h2' size='md' mt={2}>
-						役割
-					</Heading>
-					<UnorderedList>
-						{projects[projectIndex].roles?.map((role) => (
-							<ListItem key={role}>{role}</ListItem>
-						))}
-					</UnorderedList>
+					{projects[projectIndex].funcs && (
+						<>
+							<Heading as='h2' size='md' mt={2}>
+								機能
+							</Heading>
+							<UnorderedList>
+								{projects[projectIndex].funcs?.map((role) => (
+									<ListItem key={role}>{role}</ListItem>
+								))}
+							</UnorderedList>
+						</>
+					)}
+					{projects[projectIndex].plans && (
+						<>
+							<Heading as='h2' size='md' mt={2}>
+								予定
+							</Heading>
+							<UnorderedList>
+								{projects[projectIndex].plans?.map((role) => (
+									<ListItem key={role}>{role}</ListItem>
+								))}
+							</UnorderedList>
+						</>
+					)}
 				</ModalBody>
 				<ModalFooter>
 					<Button onClick={onClose}>Close</Button>

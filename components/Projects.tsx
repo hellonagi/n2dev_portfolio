@@ -9,13 +9,11 @@ import {
 	ModalOverlay,
 	useDisclosure,
 } from '@chakra-ui/react'
-import Paragraph from './utils/Paragraph'
-import Section from './Section'
+import Section from './utils/Section'
 import Image from 'next/image'
 import React from 'react'
-import styles from './Works.module.css'
+import styles from './Projects.module.css'
 import { projects } from '../constants'
-import Link from 'next/link'
 import ProjectModal from './projects/ProjectModal'
 
 const Projects = () => {
@@ -24,10 +22,6 @@ const Projects = () => {
 
 	const OverlayOne = () => (
 		<ModalOverlay bg='blackAlpha.300' backdropFilter='blur(10px) hue-rotate(90deg)' />
-	)
-
-	const OverlayTwo = () => (
-		<ModalOverlay bg='none' backdropFilter='auto' backdropInvert='80%' backdropBlur='2px' />
 	)
 
 	const { isOpen, onOpen, onClose } = useDisclosure()

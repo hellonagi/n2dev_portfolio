@@ -59,7 +59,7 @@ const Navbar = () => {
 					</NLink>
 				</Stack> */}
 
-				<Box flex={1} position='absolute' right={2}>
+				<Box flex={1} position='absolute' right={6}>
 					<ToggleButton />
 
 					{/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>

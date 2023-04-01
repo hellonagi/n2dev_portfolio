@@ -17,7 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
 
 			<Navbar />
 
-			<Container maxW='container.md' pt={14}>
+			<Container maxW='lg' pt={14}>
 				{children}
 
 				<Footer />
